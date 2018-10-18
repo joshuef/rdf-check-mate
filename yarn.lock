@@ -789,6 +789,10 @@ babel-code-frame@^6.26.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
+babel-core@7.0.0-bridge.0:
+  version "7.0.0-bridge.0"
+  resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-7.0.0-bridge.0.tgz#95a492ddd90f9b4e9a4a1da14eb335b87b634ece"
+
 babel-core@^6.0.0, babel-core@^6.26.0:
   version "6.26.3"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.26.3.tgz#b2e2f09e342d0f0c88e2f02e067794125e75c207"
@@ -812,10 +816,6 @@ babel-core@^6.0.0, babel-core@^6.26.0:
     private "^0.1.8"
     slash "^1.0.0"
     source-map "^0.5.7"
-
-babel-core@^7.0.0-bridge.0:
-  version "7.0.0-bridge.0"
-  resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-7.0.0-bridge.0.tgz#95a492ddd90f9b4e9a4a1da14eb335b87b634ece"
 
 babel-eslint@9.0.0:
   version "9.0.0"
@@ -848,14 +848,7 @@ babel-helpers@^6.24.1:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
-babel-jest@23.4.2:
-  version "23.4.2"
-  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-23.4.2.tgz#f276de67798a5d68f2d6e87ff518c2f6e1609877"
-  dependencies:
-    babel-plugin-istanbul "^4.1.6"
-    babel-preset-jest "^23.2.0"
-
-babel-jest@^23.6.0:
+babel-jest@23.6.0, babel-jest@^23.6.0:
   version "23.6.0"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-23.6.0.tgz#a644232366557a2240a0c083da6b25786185a2f1"
   dependencies:
@@ -3894,6 +3887,20 @@ sane@^2.0.0:
 sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+
+"schema-doter@git+https://github.com/joshuef/schema-doter#cf11b81966bdaafa8e264ef1c303756baf1c0666":
+  version "1.0.0"
+  resolved "git+https://github.com/joshuef/schema-doter#cf11b81966bdaafa8e264ef1c303756baf1c0666"
+  dependencies:
+    bristol "0.4.0"
+    commander "2.17.1"
+    cross-env "5.2.0"
+    fs-extra "7.0.0"
+    klaw "3.0.0"
+    palin "2.2.0"
+    request "2.88.0"
+    request-promise-native "1.0.5"
+    rimraf "2.6.2"
 
 "semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1:
   version "5.6.0"
