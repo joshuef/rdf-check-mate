@@ -68,6 +68,3 @@ describe( 'validate', () =>
     } );
 
 } )
-
-
-// TODO : Update README.

@@ -1,4 +1,4 @@
-# Node CLI Starter
+# RDF Check Mate
 
 <!-- |Linux/OS X|Windows|Coverage Status|
 |:---:|:---:|:---:|
@@ -16,14 +16,50 @@ Install using yarn (needed for postinstall script/retrieval)
 
 ## Use 
 
-When using:
+Valid:
 
-```js
-import { Book } from './schemaDefinitions';
+```
+// Checking against Book schema from schema.org
+import { Book } from 'schema-doter';
 
-console.log( 'this is happening', Book )
+const sampleObject = {
+    'numberOfPages' : 4,
+    'title'         : 'Dave',
+    'author'        : 'me',
+    'published'     : 'now',
+    'publisher'     : 'yes '
+};
+
+valid = validate( Book, {...sampleObject, numberOfPages: 4.2222} );
+
+// This warns in console:
+//
+// There is some incompatability between your provided object and the schema...
+//  title , published do not exist on this schema
+
+// But:
+console.log( valid ) // true
 ```
 
+Invalid:
+```
+const badObject = {
+    'numberOfPages' : 4.1,
+    'title'         : 'Dave',
+    'author'        : 'me',
+    'published'     : 'now',
+    'publisher'     : 'yes '
+};
+
+valid = validate( Book, {...badObject, numberOfPages: 4.2222} );
+console.log( valid ) // false
+
+// also throws:
+// Candidate data type error: 4.1 is number should be: Integer
+
+```
+            
+            
 ## TODO 
 
 - Publish as npm package?
@@ -31,3 +67,4 @@ console.log( 'this is happening', Book )
 - Add tests
 - use RDFlib for extracting props etc.
 - setup CI
+- Add validity checks for more data types and classes etc
